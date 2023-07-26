@@ -11,6 +11,9 @@ app.use(cors())
 
 //routes
 app.use('/api/recipe', recipeRouter)
+app.get("/", (req, res)=>{
+    res.setHeader("Access-Control-Allow-Credentials", "true")
+})
 
 const start = async () =>{
     const port = 3001 
