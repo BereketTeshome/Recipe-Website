@@ -11,7 +11,7 @@ const Latest = () => {
             const fetchData = async() =>{
                 setLoading(true)
                 try {
-                    const res = await axios.get("https://recipe-website-0sdh.onrender.com/api/recipe/getRecipes")
+                    const res = await axios.get("https://recipe-website-5naj.onrender.com/api/recipe/getRecipes")
                     setImage(res.data.recipes)
                     setLoading(false)
                 } catch (error) {

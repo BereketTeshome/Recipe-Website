@@ -12,7 +12,7 @@ const MexicanAll = () => {
         const fetchData = async() =>{
             setLoading(true)
             try {
-                const res = await axios.get("https://recipe-website-0sdh.onrender.com/api/recipe/getAllMexicanRecipe")
+                const res = await axios.get("https://recipe-website-5naj.onrender.com/api/recipe/getAllMexicanRecipe")
                 setData(res.data.recipes)
                 setLoading(false)
             } catch (error) {

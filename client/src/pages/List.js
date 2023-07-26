@@ -14,7 +14,7 @@ const List = () => {
         const fetchSingleRecipe = async () => {
           const pathName = location.pathname.split("/")[2]
           try {
-            const res =await axios.get(`https://recipe-website-0sdh.onrender.com/api/recipe/getSingleRecipe/${pathName}`)
+            const res =await axios.get(`https://recipe-website-5naj.onrender.com/api/recipe/getSingleRecipe/${pathName}`)
             setList(res.data.recipes)
           } catch (error) {
             console.error(error)
