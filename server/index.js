@@ -18,7 +18,7 @@ app.get("/", (req, res)=>{
 const start = async () =>{
     const port = 3001 
     try {
-        await connect(process.env.MONGO_URL);
+        await connect("mongodb+srv://bereketteshome685:462462b@recipe-web-application.sbpzkj0.mongodb.net/?retryWrites=true&w=majority");
         app.listen(port, () => console.log(`Server is running on port ${port}`))
     } catch (error) {
         console.error(error)
