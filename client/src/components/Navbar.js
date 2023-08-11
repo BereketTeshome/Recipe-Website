@@ -4,8 +4,6 @@ import Search from './Search'
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 
-
-
 const Navbar = () => {
   const [toggle, setToggle] = useState(true);
 

@@ -12,7 +12,7 @@ const ThaiAll = () => {
         const fetchData = async() =>{
             setLoading(true)
             try {
-                const res = await axios.get("https://recipe-website-5naj.onrender.com/api/recipe/getAllThaiRecipe")
+                const res = await axios.get("http://localhost:3001/api/recipe/getAllThaiRecipe")
                 setData(res.data.recipes)
                 setLoading(false)
             } catch (error) {

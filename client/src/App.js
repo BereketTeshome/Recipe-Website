@@ -1,25 +1,26 @@
 import './App.css';
+import { lazy, Suspense } from 'react';
 import {Route, Routes, BrowserRouter} from 'react-router-dom'
-import Submit from './pages/Submit';
-import Main from './pages/Main';
-import Search from './pages/Search';
-import List from './pages/List';
-import LatestAll from './pages/LatestAll';
-import ThaiAll from './pages/ThaiAll';
-import AmericanAll from './pages/AmericanAll';
-import ChineseAll from './pages/ChineseAll';
-import MexicanAll from './pages/MexicanAll';
-import EthiopianAll from './pages/EthiopianAll';
-import About from './pages/About';
-import Contact from './pages/Contact';
+import Loading from './components/Loading';
+
+const Submit = lazy(()=> import('./pages/Submit'))
+const Main = lazy(()=> import('./pages/Main'))
+const Search = lazy(()=> import('./pages/Search'))
+const List = lazy(()=> import('./pages/List'))
+const LatestAll = lazy(()=> import('./pages/LatestAll'))
+const ThaiAll = lazy(()=> import('./pages/ThaiAll'))
+const AmericanAll = lazy(()=> import('./pages/AmericanAll'))
+const ChineseAll = lazy(()=> import('./pages/ChineseAll'))
+const MexicanAll = lazy(()=> import('./pages/MexicanAll'))
+const EthiopianAll = lazy(()=> import('./pages/EthiopianAll'))
+const About = lazy(()=> import('./pages/About'))
+const Contact = lazy(()=> import('./pages/Contact'))
 
 function App() {
-
   return (
     <div className="App">
-        
-
         <BrowserRouter>
+        <Suspense fallback={<Loading />}>
           <Routes>
             <Route path='/' element={<Main />}/>
             <Route path='/submit' element={<Submit />}/>
@@ -34,6 +35,7 @@ function App() {
             <Route path='/about' element={<About />}/>
             <Route path='/contact' element={<Contact />}/>
           </Routes>
+        </Suspense>
         </BrowserRouter>
     </div>
   );

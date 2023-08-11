@@ -3,7 +3,6 @@ import axios from 'axios'
 import { Link } from 'react-router-dom'
 import Loading from './Loading'
 
-
 const Thai = () => {
 
     const [images, setImages] = useState([])
@@ -13,7 +12,7 @@ const Thai = () => {
             const fetchData = async() =>{
                 setLoading(true)
                 try {
-                    const res = await axios.get("https://recipe-website-5naj.onrender.com/api/recipe/getThaiRecipes")
+                    const res = await axios.get("http://localhost:3001/api/recipe/getThaiRecipes")
                     setImages(res.data.recipes)
                     setLoading(false)
                 } catch (error) {

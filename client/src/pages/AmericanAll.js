@@ -12,7 +12,7 @@ const AmericanAll = () => {
         const fetchData = async() =>{
             setLoading(true)
             try {
-                const res = await axios.get("https://recipe-website-5naj.onrender.com/api/recipe/getAllAmericanRecipe")
+                const res = await axios.get("http://localhost:3001/api/recipe/getAllAmericanRecipe")
                 setData(res.data.recipes)
                 setLoading(false)
             } catch (error) {

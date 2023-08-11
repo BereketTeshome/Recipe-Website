@@ -11,11 +11,9 @@ const American = () => {
         const fetchData = async() =>{
             setLoading(true)
             try {
-                const res = await axios.get("https://recipe-website-5naj.onrender.com/api/recipe/getAmericanRecipe")
-                // const res = await axios.get("https://recipe-website-0sdh.onrender.com/http://localhost:3001/api/recipe/getAmericanRecipe")
+                const res = await axios.get("http://localhost:3001/api/recipe/getAmericanRecipe")
                 setImages(res.data.recipes)
                 setLoading(false)
-                //console.log(res.data.recipes);
             } catch (error) {
                 console.error(error)
                 setLoading(false)

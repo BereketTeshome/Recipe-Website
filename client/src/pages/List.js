@@ -14,7 +14,7 @@ const List = () => {
         const fetchSingleRecipe = async () => {
           const pathName = location.pathname.split("/")[2]
           try {
-            const res =await axios.get(`https://recipe-website-5naj.onrender.com/api/recipe/getSingleRecipe/${pathName}`)
+            const res =await axios.get(`http://localhost:3001/api/recipe/getSingleRecipe/${pathName}`)
             setList(res.data.recipes)
           } catch (error) {
             console.error(error)
@@ -31,7 +31,6 @@ const List = () => {
           <Box mb={'20px'}>
             <Breadcrumbs area-label='breadcrumb'>
               <Link underline='hover' href='/'>Home</Link>
-              {/* <Link underline='hover'>{item.name}</Link> */}
               <Typography>{item.name}</Typography>              
             </Breadcrumbs>
           </Box>
