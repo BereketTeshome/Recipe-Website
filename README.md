@@ -9,3 +9,4 @@ The website is built using the MERN stack (MongoDB, Express.js, React.js, and No
 - Recipe Search
 - Recipe Collections
 - Detailed Recipe Pages
+- Contact form
