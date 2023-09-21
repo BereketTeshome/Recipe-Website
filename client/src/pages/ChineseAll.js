@@ -12,7 +12,7 @@ const ChineseAll = () => {
         const fetchData = async() =>{
             setLoading(true)
             try {
-                const res = await axios.get("http://localhost:3001/recipe/getAllChineseRecipe")
+                const res = await axios.get("http://localhost:3001/api/recipe/getAllChineseRecipe")
                 setData(res.data.recipes)
                 setLoading(false)
             } catch (error) {
