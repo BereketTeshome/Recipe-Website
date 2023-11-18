@@ -85,7 +85,7 @@ const Submit = () => {
       setError(true)
     }
     try {
-      await axios.post("http://localhost:3001/api/recipe/createRecipe", newRecipe)
+      await axios.post("https://recipe-website-three-rho.vercel.app/api/recipe/createRecipe", newRecipe)
       alert('Recipe added!!')
       navigate("/");
     } catch (error) {

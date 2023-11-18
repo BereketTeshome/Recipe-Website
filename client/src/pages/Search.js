@@ -14,7 +14,7 @@ const Search = () => {
         const fetchData = async() =>{
             setLoading(true)
             try {
-                const res = await axios.post(`http://localhost:3001/api/recipe/search?${searchTerm}`)
+                const res = await axios.post(`https://recipe-website-three-rho.vercel.app/api/recipe/search?${searchTerm}`)
                 console.log(res.data);
                 setData(res.data.recipe)
                 setLoading(false)

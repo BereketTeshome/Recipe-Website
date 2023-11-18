@@ -11,7 +11,7 @@ const Mexican = () => {
         const fetchData = async() =>{
             setLoading(true)
             try {
-                const res = await axios.get("http://localhost:3001/api/recipe/getMexicanRecipe")
+                const res = await axios.get("https://recipe-website-three-rho.vercel.app/api/recipe/getMexicanRecipe")
                 setImages(res.data.recipes)
                 setLoading(false)
             } catch (error) {

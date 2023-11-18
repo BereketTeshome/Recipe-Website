@@ -12,7 +12,7 @@ const EthiopianAll = () => {
         const fetchData = async() =>{
             setLoading(true)
             try {
-                const res = await axios.get("http://localhost:3001/api/recipe/getAllEthiopianRecipe")
+                const res = await axios.get("https://recipe-website-three-rho.vercel.app/api/recipe/getAllEthiopianRecipe")
                 setData(res.data.recipes)
                 setLoading(false)
             } catch (error) {

@@ -12,7 +12,7 @@ const LatestAll = () => {
         const fetchData = async() =>{
             setLoading(true)
             try {
-                const res = await axios.get("http://localhost:3001/api/recipe/getAllLatestRecipe")
+                const res = await axios.get("https://recipe-website-three-rho.vercel.app/api/recipe/getAllLatestRecipe")
                 setData(res.data.recipes)
                 setLoading(false)
             } catch (error) {
